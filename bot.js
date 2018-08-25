@@ -155,6 +155,7 @@ client.on('message', async msg => {
         }
         
 	} else if (command === `skip`) {
+	} else if (command === `s`) {
 
 		if (!msg.member.voiceChannel) return msg.channel.send("You Must be in a Voice channel to Run the Music commands!");
         if (!serverQueue) return msg.channel.send("There is no Queue to skip!!");
@@ -171,16 +172,6 @@ client.on('message', async msg => {
 		serverQueue.connection.dispatcher.end('Ok, stopped & disconnected from your Voice channel');
         return undefined;
         
-	} else if (command === `vol`) {
-
-		if (!msg.member.voiceChannel) return msg.channel.send("You Must be in a Voice channel to Run the Music commands!");
-		if (!serverQueue) return msg.channel.send('You only can use this command while music is playing!');
-        if (!args[1]) return msg.channel.send(`The bot volume is **${serverQueue.volume}**`);
-        
-		serverQueue.volume = args[1];
-        serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 50);
-        
-        return msg.channel.send(`Volume Now is **${args[1]}**`);
 
 
 	} else if (command === `pause`) {
