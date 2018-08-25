@@ -153,9 +153,10 @@ client.on('message', async msg => {
             return handleVideo(video, msg, voiceChannel);
             
         }
-        
-		} else if (command === `skip`) 
-		} else if (command === `s`) {
+		
+		
+        } else if (command === "skip") {
+	} else if (command === "s") {
 
 		if (!msg.member.voiceChannel) return msg.channel.send("You Must be in a Voice channel to Run the Music commands!");
         if (!serverQueue) return msg.channel.send("There is no Queue to skip!!");
