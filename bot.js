@@ -27,7 +27,7 @@ const prefix = "1";
 /////////////////////////
 ////////////////////////
 
-client.user.setGame(1Play);
+client.user.setGame('1Play');
 
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
