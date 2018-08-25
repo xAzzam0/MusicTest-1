@@ -21,6 +21,11 @@ const gif = require("gif-search");
 const client = new Discord.Client({disableEveryone: true});
 
 const prefix = "1";
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`1Play`,"http://twitch.tv/S-F")
+
 /////////////////////////
 ////////////////////////
 
