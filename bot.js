@@ -73,8 +73,7 @@ client.on('message', async msg => {
 	let command = msg.content.toLowerCase().split(" ")[0];
 	command = command.slice(prefix.length)
 
-        if(command === `play`) {
-	 
+	if (command === `play`) {
 		const voiceChannel = msg.member.voiceChannel;
         
         if (!voiceChannel) return msg.channel.send("I can't find you in any voice channel!");
@@ -153,10 +152,9 @@ client.on('message', async msg => {
             return handleVideo(video, msg, voiceChannel);
             
         }
-		
-		
-             
-              if(command === `skip`) {
+        
+	} else if (command === `skip`) {
+
 		if (!msg.member.voiceChannel) return msg.channel.send("You Must be in a Voice channel to Run the Music commands!");
         if (!serverQueue) return msg.channel.send("There is no Queue to skip!!");
 
