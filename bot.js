@@ -73,7 +73,7 @@ client.on('message', async msg => {
 	let command = msg.content.toLowerCase().split(" ")[0];
 	command = command.slice(prefix.length)
 
-	} else if (command === `play`) {
+	} if (command === `play`) {
 	} else if (command === `p`) {
 		const voiceChannel = msg.member.voiceChannel;
         
