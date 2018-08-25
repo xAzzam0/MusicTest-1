@@ -21,8 +21,8 @@ const gif = require("gif-search");
 const client = new Discord.Client({disableEveryone: true});
 
 const prefix = "1";
-
-
+/////////////////////////
+////////////////////////
 
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
@@ -43,12 +43,22 @@ client.on('message', async msg =>{
     msg.channel.send(embed);
     }
 });
+/////////////////////////
+////////////////////////
 
-/////
+/////////////////////////
+////////////////////////
+//////////////////////
+/////////////////////////
+////////////////////////
+//////////////////////
 
-
-
-
+/////////////////////////
+////////////////////////
+//////////////////////
+/////////////////////////
+////////////////////////
+//////////////////////
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
@@ -171,14 +181,6 @@ client.on('message', async msg => {
         return msg.channel.send(`Volume Now is **${args[1]}**`);
 
 
-//	//	//
-		const embedqu = new Discord.RichEmbed()
-        .setTitle("The Queue Songs :")
-        .setDescription(`
-        ${serverQueue.songs.map(song => `${++index}. **${song.title}**`).join('\n')}
-**Now playing :** **${serverQueue.songs[0].title}**`)
-        .setColor("#f7abab")
-		return msg.channel.sendEmbed(embedqu);
 	} else if (command === `pause`) {
 		if (serverQueue && serverQueue.playing) {
 			serverQueue.playing = false;
@@ -268,3 +270,4 @@ function play(guild, song) {
 
 
 client.login(process.env.BOT_TOKEN);
+
