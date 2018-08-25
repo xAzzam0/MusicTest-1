@@ -26,9 +26,8 @@ const prefix = "1";
 
 /////////////////////////
 ////////////////////////
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`1Play`,"http://twitch.tv/S-F")
+
+client.user.setGame(1Play);
 
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
