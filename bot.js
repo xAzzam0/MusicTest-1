@@ -74,6 +74,7 @@ client.on('message', async msg => {
 	command = command.slice(prefix.length)
 
 	if (command === `play`) {
+	if (command === `p`) {
 		const voiceChannel = msg.member.voiceChannel;
         
         if (!voiceChannel) return msg.channel.send("I can't find you in any voice channel!");
